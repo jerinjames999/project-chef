@@ -1,0 +1,25 @@
+{
+  "name": "project-chef",
+  "version": "1.0.0",
+  "description": "Recipe project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerinjames999/project-chef.git"
+  },
+  "author": "Jerin James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerinjames999/project-chef/issues"
+  },
+  "homepage": "https://github.com/jerinjames999/project-chef#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
