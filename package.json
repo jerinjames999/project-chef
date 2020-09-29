@@ -21,13 +21,17 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "dotenv-webpack": "^3.0.0",
     "html-webpack-plugin": "^4.4.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "axios": "^0.20.0",
+    "babel-polyfill": "^6.26.0",
+    "psl": "^1.8.0"
   }
 }

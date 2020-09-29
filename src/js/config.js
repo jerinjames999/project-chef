@@ -1,0 +1,1 @@
+export const apiurl = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/";
