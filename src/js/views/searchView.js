@@ -27,7 +27,7 @@ const createButton = (page, type) => `
 `
 const renderButtons = (page, numResults, resPerPage) => {
     const pages = Math.ceil(numResults/resPerPage);
-    let button;
+    let button = ``;
     if(page === 1 && pages > 1){
         button = createButton(page, 'next');
     }
@@ -39,13 +39,13 @@ const renderButtons = (page, numResults, resPerPage) => {
     }
     elements.searchResPages.insertAdjacentHTML('afterbegin', button);
 };
-export const renderResults = (recipes, page=1, resRerPage = 10) => {
-    const start = (page-1)*resRerPage;
-    const end = page*resRerPage;
+export const renderResults = (recipes, page=1, resPerPage = 10) => {
+    const start = (page-1)*resPerPage;
+    const end = page*resPerPage;
     
     
     recipes.slice(start, end).forEach(renderRecipe);
-    renderButtons(page, recipes.length, resRerPage)
+    renderButtons(page, recipes.length, resPerPage)
 };
 
 export const clearInput = () => {
@@ -55,7 +55,13 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '' ;
     elements.searchResPages.innerHTML = '';
 };
-
+export const highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.results__link'));
+    resultsArr.forEach(el => {
+        el.classList.remove('results__link--active');
+    });
+    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+};
 const limitRecipeTitle = (title,limit = 17) =>{
     const newTitle = [];
     if(title.length > limit){

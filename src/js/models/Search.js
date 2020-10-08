@@ -6,8 +6,8 @@ export default class Search{
     }
     async getResults(){
         try{
-          console.log('hello');
-          console.log(process.env)
+          //console.log('hello');
+          //console.log(process.env)
         const res = await axios({
             "method":"GET",
             "url": apiurl + "recipes/search/",
