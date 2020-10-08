@@ -80,7 +80,6 @@ const controlRecipe = async () => {
     RecipeView.renderRecipe(state.recipe,state.likes.isLiked(id));
     }
     catch(error){
-      console.log(error);
       alert('Error Processing Recipe');
     }
   }
@@ -123,8 +122,6 @@ elements.shopping.addEventListener('click', e => {
 /*
 Likes CONTROLLER
 */
-//for Testing
-
 
 const controlLike = () => {
   if(!state.likes) state.likes = new Likes();
