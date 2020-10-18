@@ -1,4 +1,5 @@
 import axios from 'axios';
+//const functions = require('firebase-functions');
 import {apiurl} from '../config'
 export default class Recipe{
     constructor(id){
@@ -7,6 +8,7 @@ export default class Recipe{
 
     async getRecipe() {
         try{
+            //apikey = process.env.API_KEY || functions.config().service.key;
             const res = await axios({
                 "method":"GET",
                 "url":apiurl + "recipes/"+this.id+"/information",

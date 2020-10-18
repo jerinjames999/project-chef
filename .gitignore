@@ -1,6 +1,6 @@
 .DS_Store
 node_modules/
 .env
-assets/js/
-assets/index.html
+dist/js/
+dist/index.html
 debug.log

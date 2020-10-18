@@ -4,11 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: ['./src/js/index.js', 'babel-polyfill'],
     output: {
-        path: path.resolve(__dirname,'assets'),
+        path: path.resolve(__dirname,'dist'),
         filename:'js/bundle.js'
     },
     devServer: {
-        contentBase: './assets'
+        contentBase: './dist'
     },
     plugins:[
         new Dotenv(),
