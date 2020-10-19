@@ -40,8 +40,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROJECT_CHEF_E5C0F }}'
           projectId: project-chef-e5c0f
         env:
-<<<<<<< HEAD:.github/workflows/pull_request_ci.yml
           FIREBASE_CLI_PREVIEWS: hostingchannels
-=======
-          FIREBASE_CLI_PREVIEWS: hostingchannels
->>>>>>> origin/master:.github/workflows/integrate.yml
