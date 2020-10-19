@@ -17,7 +17,9 @@ jobs:
           echo API_KEY =${{ secrets.API_KEY }} >> .env
       - name: Delete gitignore
         run: |
+          ls
           rm .gitignore
+          ls
 
       - name: Push .env to directory
         run: |
@@ -25,6 +27,7 @@ jobs:
           git config user.name "jerinjames999"
           git add .
           git commit -m "environment variables"
+          ls
 
       - run: npm ci && npm run build
         # env: 
