@@ -17,7 +17,9 @@ jobs:
           echo API_KEY =${{ secrets.API_KEY }} >> .env
       - name: Delete gitignore
         run: |
+          ls
           rm .gitignore
+          ls
 
       - name: Push .env to directory
         run: |
