@@ -16,7 +16,7 @@ jobs:
           node-version: 12
         env: 
           API_KEY: ${{ secrets.API_KEY }}
-      - run: echo ${{ secrets.CLIENT_ID }} > ./.env
+      - run: echo ${{ secrets.API_KEY }} > ./.env
       
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
