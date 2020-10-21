@@ -20,6 +20,7 @@ jobs:
         run: 
           touch .env
           echo API_KEY =${{ secrets.API_KEY }} >> ./.env
+          ls
       - name: Delete gitignore
         run: |
           rm .gitignore
