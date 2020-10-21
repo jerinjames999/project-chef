@@ -16,7 +16,8 @@ jobs:
           node-version: 12
         env: 
           API_KEY: ${{ secrets.API_KEY }}
-      - run: echo ${{ secrets.API_KEY }} > ./.env
+      - run: touch ./.env
+      - run: echo "API_KEY=${{ secrets.API_KEY }}" > ./.env
       - run: ls
       
       - run: npm ci && npm run build
